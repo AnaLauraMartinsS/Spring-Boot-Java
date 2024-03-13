@@ -1,14 +1,13 @@
-package com.martins.spring.api;
+package br.com.martins.pagweb;
 
-import jdk.internal.misc.InnocuousThread;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class PagWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(PagWebApplication.class, args);
 	}
 
 }
