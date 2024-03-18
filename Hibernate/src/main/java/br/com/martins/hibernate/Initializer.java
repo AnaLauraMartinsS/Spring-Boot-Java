@@ -42,16 +42,15 @@ public class Initializer implements ApplicationListener<ContextRefreshedEvent> {
 
         this.usersRepository.save(users);
 
-        List<Users> usersR = this.usersRepository.findAll();
+        Users users2 = new Users();
+        users2.setName("Carolina Martins Souto");
+        users2.setEmail("carolina.martins@gmail.com");
 
-        for(Users users2 : usersR){
-            for(Role role2 : users2.getRoles()){
-                for(Funcionality f : role2.getFuncionalities()){
-                    System.out.println(f.getName());
-                }
-                System.out.println(role2.getName());
-            }
-        }
+       this.usersRepository.save(users2);
+
+        Users usersR = this.usersRepository.findByName("An");
+
+        System.out.println(usersR.getName());
 
     }
 
