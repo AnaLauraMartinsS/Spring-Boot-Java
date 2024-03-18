@@ -1,7 +1,6 @@
 package br.com.martins.pagweb.controller;
 
 import br.com.martins.pagweb.model.User;
-import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

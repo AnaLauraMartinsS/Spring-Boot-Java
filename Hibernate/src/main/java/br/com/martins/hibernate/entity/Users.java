@@ -1,12 +1,16 @@
 package br.com.martins.hibernate.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
 
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Users {
 
@@ -16,7 +20,7 @@ public class Users {
     private String name;
     private String email;
 
-    @ManyToOne
-    private Role role;
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private List<Role> roles;
 
 }
